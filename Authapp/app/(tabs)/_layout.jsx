@@ -3,56 +3,102 @@ import AntDesign from '@expo/vector-icons/AntDesign';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import Feather from '@expo/vector-icons/Feather';
 import ProtectedRoute from "../../components/ProtectedRoute";
+import TabBar from "../../components/TabBar";
+import { StyleSheet,View,Text } from "react-native";
+
 export default function RootLayout() {
     return (
         <ProtectedRoute>
         <Tabs
-            screenOptions={{
-                tabBarActiveTintColor: 'tomato', 
-                tabBarInactiveTintColor: 'gray', 
-            }}
-        >
-            <Tabs.Screen 
-                name="index"
-                options={{
-                    headerShown: false, 
-                    title: "Home", 
-                    tabBarIcon: ({ color }) => (
-                        <AntDesign name="home" size={24} color={color} />
-                    )
-                }} 
-            />
-            <Tabs.Screen 
-                name="profile" 
-                options={{
-                    headerShown: false, 
-                    title: "Profile", 
-                    tabBarIcon: ({ color }) => (
-                        <AntDesign name="profile" size={24} color={color} />
-                    )
-                }} 
-            />
-            <Tabs.Screen 
-                name="settings" 
-                options={{
-                    headerShown: false, 
-                    title: "Settings", 
-                    tabBarIcon: ({ color }) => (
-                        <Feather name="settings" size={24} color={color} />
-                    )
-                }} 
-            />
-            <Tabs.Screen 
-                name="Doctor" 
-                options={{
-                    headerShown: false, 
-                    title: "Doctor", 
-                    tabBarIcon: ({ color }) => (
-                        <FontAwesome6 name="user-doctor" size={24} color={color} />
-                    )
-                }} 
-            />
-        </Tabs>
+      tabBar={(props) => <TabBar {...props} />}
+    >
+      <Tabs.Screen
+        name="index"
+        options={{
+          title: "Home",
+          headerTitleStyle: styles.title, 
+          tabBarLabelStyle: styles.tabLabel, 
+          header: () => (
+            <View style={styles.centeredContent}>
+              <Text style={styles.title}>Home</Text>
+            </View>
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="DailyLogs"
+        options={{
+          title: "Daily Logs",
+          headerTitleStyle: styles.title,
+          header: () => (
+            <View style={styles.centeredContent}>
+              <Text style={styles.title}>Daily Logs</Text>
+            </View>
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="Games"
+        options={{
+          title: "Games",
+          headerTitleStyle: styles.title,
+          header: () => (
+            <View style={styles.centeredContent}>
+              <Text style={styles.title}>Games</Text>
+            </View>
+          ),
+        }}
+      />
+      
+      <Tabs.Screen
+        name="Doctor"
+        options={{
+          title: "Doctor",
+          headerTitleStyle: styles.title,
+          header: () => (
+            <View style={styles.centeredContent}>
+              <Text style={styles.title}>Doctor</Text>
+            </View>
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: "Profile",
+          headerTitleStyle: styles.title,
+          header: () => (
+            <View style={styles.centeredContent}>
+              <Text style={styles.title}>Doctor</Text>
+            </View>
+          ),
+        }}
+      />
+    </Tabs>
         </ProtectedRoute>
     );
 }
+
+const styles = StyleSheet.create({
+    tabs: {
+      marginBottom: -20,
+    },
+    title: {
+      fontSize: 20,
+      fontWeight: "bold",
+      color: "#41B3A2",
+      marginTop:20
+    },
+    centeredContent: {
+      flex: 1,
+      justifyContent: "center", 
+      alignItems: "center", 
+    },
+    tabLabel: {
+      fontSize: 14,
+      color: "#333",
+    },
+  });
+  
+  
+  
