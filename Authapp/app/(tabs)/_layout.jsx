@@ -18,11 +18,7 @@ export default function RootLayout() {
           title: "Home",
           headerTitleStyle: styles.title, 
           tabBarLabelStyle: styles.tabLabel, 
-          header: () => (
-            <View style={styles.centeredContent}>
-              <Text style={styles.title}>Home</Text>
-            </View>
-          ),
+          headerShown:false
         }}
       />
       <Tabs.Screen
@@ -84,10 +80,10 @@ const styles = StyleSheet.create({
       marginBottom: -20,
     },
     title: {
-      fontSize: 20,
+      fontSize: 30,
       fontWeight: "bold",
       color: "#41B3A2",
-      marginTop:20
+      marginTop:5
     },
     centeredContent: {
       flex: 1,

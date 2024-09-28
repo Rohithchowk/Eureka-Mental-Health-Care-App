@@ -11,6 +11,9 @@ const AppWrapper=()=>{
     return(
         <Stack>
             <Stack.Screen name="index" options={{headerShown:false, title:"Home"}}/>
+            <Stack.Screen name="(tabs)" options={{headerShown:false, title:""}}/>
+            <Stack.Screen name="(sleep)/index" options={{headerShown:false, }}/>
+            
         </Stack>
     )
 
