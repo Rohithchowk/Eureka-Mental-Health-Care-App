@@ -3,6 +3,7 @@ import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { Video, ResizeMode } from "expo-av";
 import { useRouter } from "expo-router";
 
+
 export default function App() {
   const video = React.useRef(null);
   const [status, setStatus] = React.useState({});

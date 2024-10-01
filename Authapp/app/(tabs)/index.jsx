@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, ImageBackground, TouchableOpacity } from "react-native";
 import { useRouter } from "expo-router";
-
+import FlashMessage from "react-native-flash-message";
+import GeminiChat from '../../components/GeminiChatbot';
 const Home = () => {
     let router=useRouter();
     return (
@@ -57,7 +58,10 @@ const Home = () => {
                 </View>
 
                 <View>
-                    <Text style={styles.textContent}></Text>
+
+                    <Text style={styles.textContent}>Hello</Text>
+                    <GeminiChat />
+                    <FlashMessage position={"top"} />
                 </View>
             </ScrollView>
         </View>
