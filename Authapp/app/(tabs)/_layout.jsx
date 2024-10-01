@@ -65,7 +65,7 @@ export default function RootLayout() {
           headerTitleStyle: styles.title,
           header: () => (
             <View style={styles.centeredContent}>
-              <Text style={styles.title}>Doctor</Text>
+              <Text style={styles.title}>Profile</Text>
             </View>
           ),
         }}
