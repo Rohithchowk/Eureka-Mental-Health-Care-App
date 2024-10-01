@@ -3,7 +3,7 @@ import { View, Text, Image, FlatList, StyleSheet, TouchableOpacity, Modal, Butto
 import DateTimePicker from '@react-native-community/datetimepicker';
 
 // Import the local image
-const bannerImage = 'https://via.placeholder.com/100';
+const bannerImage = ''; // Add your image source here
 
 // Sample data for psychiatrists
 const psychiatrists = [
@@ -43,12 +43,13 @@ const Doctor = () => {
   const [showDatePicker, setShowDatePicker] = useState(false);
   const [selectedSlot, setSelectedSlot] = useState('');
 
+  // Reset date and isDateSelected when app starts or reloads
   useEffect(() => {
     setDate(new Date());
-    setIsDateSelected(false); 
-  }, []);  
+    setIsDateSelected(false);  // Reset the date to none
+  }, []);  // Empty dependency array ensures this runs only on mount
 
-  const handleDateChange = (event: any, selectedDate?: Date) => {
+  const handleDateChange = (event, selectedDate) => {
     if (event.type === 'dismissed') {
       setShowDatePicker(false);
       return;
@@ -64,9 +65,11 @@ const Doctor = () => {
     setIsDateSelected(false);
   };
 
-  const openBookingModal = (doctor: any) => {
+  const openBookingModal = (doctor) => {
+   
     setSelectedDoctor(doctor);
     setShowModal(true);
+    console.log("opening model")
   };
 
   const closeBookingModal = () => {
@@ -77,13 +80,49 @@ const Doctor = () => {
     setGender('');
   };
 
-  const handleBookAppointment = () => {
+  const handleBookAppointment = async () => {
     if (!selectedSlot || !patientName || !gender) {
       Alert.alert('Error', 'Please fill all the details.');
       return;
     }
-    Alert.alert('Success', 'Appointment booked successfully!');
-    closeBookingModal();
+
+    if (!selectedDoctor) {
+      Alert.alert('Error', 'No doctor selected.');
+      return;
+    }
+
+    const appointmentData = {
+      patientName,
+      gender,
+      doctorName: selectedDoctor.name,
+      date: date.toISOString().split('T')[0],
+      slot: selectedSlot,
+    };
+
+    console.log("Appointment Data: ", appointmentData); // Log the data being sent
+
+    try {
+      const response = await fetch('http://10.0.2.2:9000/book-appointment', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(appointmentData),
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        Alert.alert('Success', result.message);
+        closeBookingModal();
+      } else {
+        const error = await response.json();
+        console.error('Booking error response:', error); // Log error response
+        Alert.alert('Error', error.message);
+      }
+    } catch (error) {
+      Alert.alert('Error', 'Failed to book the appointment. Please try again later.');
+      console.error('Booking error:', error); // Log full error details
+    }
   };
 
   const renderDoctor = ({ item }) => (
@@ -101,8 +140,6 @@ const Doctor = () => {
       </TouchableOpacity>
     </View>
   );
-
-
 
   return (
     <View style={styles.container}>
@@ -189,7 +226,6 @@ const Doctor = () => {
                 underlineColorAndroid="transparent"
               />
 
-
               {/* Gender Selection Section */}
               <Text style={styles.genderHeading}>Select Gender</Text>
               <View style={styles.genderContainer}>
@@ -232,80 +268,67 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     alignItems: 'center',
-    marginBottom: 20,
   },
   bannerImage: {
     width: '100%',
     height: 200,
-    borderRadius: 10,
+    resizeMode: 'cover',
+  },
+  dateContainer: {
+    marginVertical: 16,
+  },
+  centeredDate: {
+    alignItems: 'center',
+  },
+  selectedDate: {
+    fontSize: 18,
+  },
+  clearLink: {
+    color: 'blue',
+    marginTop: 8,
+  },
+  row: {
+    justifyContent: 'space-between',
   },
   card: {
-    flex: 1,
-    margin: 8,
-    padding: 10,
     backgroundColor: '#fff',
-    borderRadius: 10,
-    elevation: 2,
+    borderRadius: 8,
+    elevation: 3,
+    margin: 8,
+    padding: 16,
     alignItems: 'center',
+    flex: 1,
   },
   image: {
     width: 100,
     height: 100,
     borderRadius: 50,
-    marginBottom: 10,
   },
   name: {
     fontSize: 18,
     fontWeight: 'bold',
+    marginVertical: 8,
   },
   specialization: {
     fontSize: 14,
     color: '#666',
   },
-  availableText: {
-    fontSize: 14,
-    color: 'green',
-    marginTop: 5,
-  },
   bookButton: {
-    backgroundColor: '#6ec007', // Green color for the button
-    borderRadius: 5,
+    backgroundColor: '#28a745',
     padding: 10,
-    marginTop: 10,
+    borderRadius: 5,
+    marginTop: 8,
   },
   buttonText: {
     color: '#fff',
-    fontSize: 14,
     fontWeight: 'bold',
-  },
-  row: {
-    justifyContent: 'space-between',
-  },
-  dateContainer: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginVertical: 20,
-  },
-  centeredDate: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  selectedDate: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    marginRight: 10,
-  },
-  clearLink: {
-    fontSize: 14,
-    color: '#007BFF',
-    textDecorationLine: 'underline',
+    textAlign: 'center',
   },
   modalOverlay: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    backgroundColor: 'rgba(0,0,0,0.5)',
   },
   modalContent: {
     width: '90%',
@@ -318,11 +341,11 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     borderRadius: 50,
-    marginBottom: 10,
   },
   modalName: {
     fontSize: 20,
     fontWeight: 'bold',
+    marginVertical: 10,
   },
   modalSpecialization: {
     fontSize: 16,
@@ -336,82 +359,79 @@ const styles = StyleSheet.create({
   slotContainer: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
   },
   slotBox: {
-    paddingVertical: 10,
-    paddingHorizontal: 20,
+    backgroundColor: '#e9ecef',
+    padding: 10,
+    borderRadius: 5,
     margin: 5,
-    backgroundColor: '#E5E5E5',
-    borderRadius: 10,
-  },
-  slotText: {
-    fontSize: 14,
-    color: '#333',
   },
   selectedSlot: {
-    backgroundColor: '#0B0BFF', // Green color for selected slot
+    backgroundColor: '#007bff',
   },
   selectedSlotText: {
     color: '#fff',
   },
+  slotText: {
+    color: '#000',
+  },
   patientNameHeading: {
     fontSize: 18,
     fontWeight: 'bold',
-    marginTop: 15,
-    marginBottom: 5,
+    marginTop: 20,
   },
   textInput: {
     borderWidth: 1,
-    borderColor: '#ddd',
+    borderColor: '#ccc',
     borderRadius: 5,
     padding: 10,
     width: '100%',
-    marginBottom: 15,
+    marginTop: 8,
   },
   genderHeading: {
     fontSize: 18,
     fontWeight: 'bold',
-    marginBottom: 5,
+    marginTop: 20,
   },
   genderContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginBottom: 15,
+    justifyContent: 'space-around',
+    width: '100%',
   },
   genderBox: {
-    flex: 1,
-    paddingVertical: 10,
-    marginHorizontal: 5,
-    backgroundColor: '#E5E5E5',
+    padding: 10,
     borderRadius: 5,
+    backgroundColor: '#e9ecef',
+    margin: 5,
+    flex: 1,
     alignItems: 'center',
   },
-  genderText: {
-    fontSize: 16,
-    color: '#333',
-  },
   selectedGender: {
-    backgroundColor: '#0B0BFF', 
+    backgroundColor: '#007bff',
   },
   selectedGenderText: {
     color: '#fff',
+  },
+  genderText: {
+    color: '#000',
   },
   buttonContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: '100%',
+    marginTop: 20,
   },
   cancelButton: {
-    backgroundColor: '#FF0000',
-    borderRadius: 5,
+    backgroundColor: '#dc3545',
     padding: 10,
-    marginTop: 10,
+    borderRadius: 5,
+    marginTop: 8,
+    width: '48%',
   },
   cancelText: {
-    fontSize: 14,
-    fontWeight: 'bold',
     color: '#fff',
+    textAlign: 'center',
   },
 });
 
