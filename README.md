@@ -51,5 +51,5 @@ This is a App that we built, when we've  participated in T-hub hackthon coducted
 
 * **Games**  The app includes a variety of brain-boosting games like Sudoku, Tower of Hanoi, and more, designed to enhance mental sharpness, problem-solving, and relaxation. These games offer fun and engaging ways to stimulate the mind and support mental wellness.
 
-* **Doctor Appointment** **Doctor Appointment Feature** The app features a **Doctor Appointment** option, allowing users to book appointments based on available dates and time slots. Users can choose between **in-person** and **virtual meetings**. For virtual consultations, we've implemented a **video call feature** to ensure seamless communication with healthcare professionals from the comfort of their homes.
+* **Doctor Appointment**  The app features a **Doctor Appointment** option, allowing users to book appointments based on available dates and time slots. Users can choose between **in-person** and **virtual meetings**. For virtual consultations, we've implemented a **video call feature** to ensure seamless communication with healthcare professionals from the comfort of their homes.
 
