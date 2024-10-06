@@ -18,17 +18,17 @@ This is a App that we built, when we've  participated in T-hub hackthon coducted
 
 
 ## TECHNOLOGIES USED
-# For Frontend
+### For Frontend
 
 * React-Native
 * Redux for State Management
 
-# For Backend
+### For Backend
 * Node.js
 * Express.js
 * MongoDB
 
-# AI& ML
+### AI& ML
 * Gemini API
 * Regression Model
 
