@@ -64,7 +64,7 @@ Alexa may ask questions like:
 
 
 <h2> 2.Google Fit Integration</h2>
-<img src="https://developers.google.com/static/fit/images/arch_rest.png" alt="google-fit api"></img>
+<img src="https://developers.google.com/static/fit/images/arch_rest.png" alt="google-fit api" width="400" height="300"></img>
  *  The app integrates seamlessly with the Google Fit API, allowing it to collect data from your Google Fit watch. By analyzing this data, the app provides a comprehensive physical and mental health score, offering insights into your overall well-being based on your activity levels, heart rate, sleep patterns, and more. This feature helps you stay informed about your health and make improvements where needed.
 
 
