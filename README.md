@@ -35,6 +35,6 @@ This is a App that we built, when we've  participated in T-hub hackthon coducted
 
 ## FEATURES
 
-  
+* Login and SignUp Screens - Users can Signup and Login into their account, we've used React-Redux for the state managament for different users.
 
 
