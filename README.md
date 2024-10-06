@@ -47,9 +47,18 @@ This is a App that we built, when we've  participated in T-hub hackthon coducted
   - Forming the foundation for future recommendations and customized app features to improve overall well-being.
 
 
-* **Daily Activities**  The previously generated health score is then mapped to the score retrieved from the Alexa-based model. This model analyzes the user's emotional and mental health through conversational data collected via Alexa, including mood, stress, and energy levels. By combining both scores—one based on the initial questionnaire and the other from Alexa's insights—we create a more comprehensive understanding of the user's overall health. This combined score is used to further tailor personalized recommendations, suggest daily activities, and offer more accurate insights when interacting with healthcare professionals.
+* **Daily Activities**  The previously generated health score is then mapped to the score retrieved from the **Alexa-based model**. This model analyzes the user's emotional and mental health through conversational data collected via Alexa, including mood, stress, and energy levels. By combining both scores—one based on the initial questionnaire and the other from Alexa's insights—we create a more comprehensive understanding of the user's overall health. This combined score is used to further tailor personalized recommendations, suggest daily activities, and offer more accurate insights when interacting with healthcare professionals.
 
-* **Games**  The app includes a variety of brain-boosting games like Sudoku, Tower of Hanoi, and more, designed to enhance mental sharpness, problem-solving, and relaxation. These games offer fun and engaging ways to stimulate the mind and support mental wellness.
+* **Games**  The app includes a variety of brain-boosting games like **Sudoku, Tower of Hanoi**, and more, designed to enhance mental sharpness, problem-solving, and relaxation. These games offer fun and engaging ways to stimulate the mind and support mental wellness.
 
 * **Doctor Appointment**  The app features a **Doctor Appointment** option, allowing users to book appointments based on available dates and time slots. Users can choose between **in-person** and **virtual meetings**. For virtual consultations, we've implemented a **video call feature** to ensure seamless communication with healthcare professionals from the comfort of their homes.
+
+* **User Profile Feature** The app includes a User Profile tab that generates insightful graphs to visualize the user's daily, weekly, and monthly activities. These graphs help users assess their productivity levels and mental well-being, indicating whether they are feeling productive or experiencing depression. The plotted points are derived from the health scores generated based on the **Alexa conversations and the general health assessment**, providing a comprehensive overview of the user's health journey.
+
+
+
+
+
+
+
 
