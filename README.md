@@ -48,3 +48,7 @@ The app begins with an **initial questionnaire** focused on key areas such as to
 - Being shared with a doctor when the user books an appointment.
 - Forming the foundation for future recommendations and customized app features to improve overall well-being.
 
+* **Daily Activities**
+  
+The previously generated health score is then mapped to the score retrieved from the Alexa-based model. This model analyzes the user's emotional and mental health through conversational data collected via Alexa, including mood, stress, and energy levels. By combining both scores—one based on the initial questionnaire and the other from Alexa's insights—we create a more comprehensive understanding of the user's overall health. This combined score is used to further tailor personalized recommendations, suggest daily activities, and offer more accurate insights when interacting with healthcare professionals.
+
