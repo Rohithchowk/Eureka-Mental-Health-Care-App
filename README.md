@@ -35,6 +35,8 @@ This is a App that we built, when we've  participated in T-hub hackthon coducted
 
 ## CORE FEATURES 
 
+*
+
 
 ## FEATURES
 
