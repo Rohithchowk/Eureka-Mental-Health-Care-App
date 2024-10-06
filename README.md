@@ -38,9 +38,9 @@ This is a App that we built, when we've  participated in T-hub hackthon coducted
 
 <img src="https://github.com/Rohithchowk/Eureka-Mental-Health-Care-App/blob/main/Flow%20Diagram.png?raw=true" alt="Flow Diagram" height="400" width="500"></img>
 
-* <h2>Genrating Health Score frequently with Alexa based Model</h2>
+1. * <h2>Genrating Health Score frequently with Alexa based Model</h2>
 
-1. User Interaction
+* User Interaction
 Users engage in conversations with the Alexa-powered virtual assistant, answering questions related to their daily activities, mood, stress levels, and overall health.
 Alexa may ask questions like:
 "How are you feeling today?"
@@ -48,26 +48,19 @@ Alexa may ask questions like:
 "Did you experience any stress?"
 "How was your energy level at work or school?"
 
-2. Data Collection
-Alexa collects user responses, including tone and voice pitch, and sends them to AWS Lambda for initial processing to extract mood, stress, and activity data.
+* Data Collection Alexa collects user responses, including tone and voice pitch, and sends them to AWS Lambda for initial processing to extract mood, stress, and activity data.
 
-3. Data Storage
-Processed data is stored in DynamoDB to track user health information over time, enabling historical analysis.
+* Data Storage Processed data is stored in DynamoDB to track user health information over time, enabling historical analysis.
 
-4. Data Processing & Sentiment Analysis
-Lambda processes stored data, using NLP to assess sentiment and voice features, gaining insights into the user’s mental health.
+* Data Processing & Sentiment Analysis Lambda processes stored data, using NLP to assess sentiment and voice features, gaining insights into the user’s mental health.
 
-5. Health Score Generation
-The processed data is passed to an ML model, generating a health score (1-100) based on mood, activity, and stress indicators, reflecting overall wellness.
+* Health Score Generation The processed data is passed to an ML model, generating a health score (1-100) based on mood, activity, and stress indicators, reflecting overall wellness.
 
-6. Score Storage & Feedback
-The score is stored in DynamoDB, and Alexa provides immediate feedback with wellness tips or recommendations.
+* Score Storage & Feedback The score is stored in DynamoDB, and Alexa provides immediate feedback with wellness tips or recommendations.
 
-7. Integration with General Health Score
-The Alexa-based score integrates with the app’s general health score, offering personalized daily activities and recommendations.
+* Integration with General Health Score The Alexa-based score integrates with the app’s general health score, offering personalized daily activities and recommendations.
 
-8. Future Recommendations & Insights
-The system learns from ongoing data to improve assessments, using the combined health score for future wellness suggestions and doctor consultations.
+* Future Recommendations & Insights The system learns from ongoing data to improve assessments, using the combined health score for future wellness suggestions and doctor consultations.
 
 
 ## FEATURES
