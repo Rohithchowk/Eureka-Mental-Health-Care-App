@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-  <a href=""><img src="https://framerusercontent.com/images/P0dKPcpigYABpDCmkzNJLOdEFU.png" width="300" height= "300" marginTop="-50"></a>
+  <img src="https://framerusercontent.com/images/P0dKPcpigYABpDCmkzNJLOdEFU.png" width="300" height= "300" style="margin-top: -50px;">
 </h1>
 
 <h4 align="center">A Real-time Android App that helps for Student's and Employees Mental Health care.</h4>
