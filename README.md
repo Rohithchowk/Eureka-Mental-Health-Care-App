@@ -35,7 +35,7 @@ This is a App that we built, when we've  participated in T-hub hackthon coducted
 
 ## CORE FEATURES 
 
-<img src="https://github.com/Rohithchowk/Eureka-Mental-Health-Care-App/blob/main/Flow%20Diagram.png?raw=true" alt="Flow Diagram"></img>
+<img src="https://github.com/Rohithchowk/Eureka-Mental-Health-Care-App/blob/main/Flow%20Diagram.png?raw=true" alt="Flow Diagram" height="300" width="300"></img>
 
 
 ## FEATURES
