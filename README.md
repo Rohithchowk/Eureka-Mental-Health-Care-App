@@ -35,7 +35,7 @@ This is a App that we built, when we've  participated in T-hub hackthon coducted
 
 ## FEATURES
 
-* Login and SignUp Screens - Users can Signup and Login into their account, we've used React-Redux for the state managament for different users.
+* Login and SignUp Screens - Users can sign up and log in to their accounts seamlessly. We've implemented React-Redux for efficient state management, ensuring smooth handling of different user sessions and personalized experiences.
   
 * Music - The app features a Music section that includes a variety of general music, as well as calming tones and binaural beats designed to promote relaxation and focus. Whether you're looking for everyday tunes or peaceful sounds to enhance your mental well-being, this feature has something for everyone.
   
