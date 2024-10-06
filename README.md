@@ -35,10 +35,10 @@ This is a App that we built, when we've  participated in T-hub hackthon coducted
 
 ## FEATURES
 
-* ####Login and SignUp Screens - Users can sign up and log in to their accounts seamlessly. We've implemented React-Redux for efficient state management, ensuring smooth handling of different user sessions and personalized experiences.
+* Login and SignUp Screens - Users can sign up and log in to their accounts seamlessly. We've implemented React-Redux for efficient state management, ensuring smooth handling of different user sessions and personalized experiences.
   
-* ####Music - The app features a Music section that includes a variety of general music, as well as calming tones and binaural beats designed to promote relaxation and focus. Whether you're looking for everyday tunes or peaceful sounds to enhance your mental well-being, this feature has something for everyone.
+* Music - The app features a Music section that includes a variety of general music, as well as calming tones and binaural beats designed to promote relaxation and focus. Whether you're looking for everyday tunes or peaceful sounds to enhance your mental well-being, this feature has something for everyone.
   
-* ####Meditation& Yoga - The app offers a Meditation & Yoga section with 50+ yoga asanas, each with descriptions highlighting their health benefits. Whether for flexibility, stress relief, or overall well-being, this feature provides guided practices to support both physical and mental health.
+* Meditation& Yoga - The app offers a Meditation & Yoga section with 50+ yoga asanas, each with descriptions highlighting their health benefits. Whether for flexibility, stress relief, or overall well-being, this feature provides guided practices to support both physical and mental health.
 
 
