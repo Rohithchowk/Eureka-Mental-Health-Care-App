@@ -38,7 +38,7 @@ This is a App that we built, when we've  participated in T-hub hackthon coducted
 
 <img src="https://github.com/Rohithchowk/Eureka-Mental-Health-Care-App/blob/main/Flow%20Diagram.png?raw=true" alt="Flow Diagram" height="400" width="500"></img>
 
-1. <h2>Genrating Health Score frequently with Alexa based Model</h2>
+<h1>1.</h1> <h2>Genrating Health Score frequently with Alexa based Model</h2>
 
 * User Interaction
 Users engage in conversations with the Alexa-powered virtual assistant, answering questions related to their daily activities, mood, stress levels, and overall health.
@@ -63,8 +63,8 @@ Alexa may ask questions like:
 * Future Recommendations & Insights The system learns from ongoing data to improve assessments, using the combined health score for future wellness suggestions and doctor consultations.
 
 
-2. <h1>Google Fit Integration</h1>
- The app integrates seamlessly with the Google Fit API, allowing it to collect data from your Google Fit watch. By analyzing this data, the app provides a comprehensive physical and mental health score, offering insights into your overall well-being based on your activity levels, heart rate, sleep patterns, and more. This feature helps you stay informed about your health and make improvements where needed.
+<h1>2.</h1>  <h2>Google Fit Integration</h2>
+ *  The app integrates seamlessly with the Google Fit API, allowing it to collect data from your Google Fit watch. By analyzing this data, the app provides a comprehensive physical and mental health score, offering insights into your overall well-being based on your activity levels, heart rate, sleep patterns, and more. This feature helps you stay informed about your health and make improvements where needed.
 
 
 ## FEATURES
