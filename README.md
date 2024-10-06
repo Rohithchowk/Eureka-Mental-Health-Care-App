@@ -33,6 +33,9 @@ This is a App that we built, when we've  participated in T-hub hackthon coducted
 * Regression Model
 
 
+## CORE FEATURES 
+
+
 ## FEATURES
 
 * **Login and SignUp Screens** - Users can sign up and log in to their accounts seamlessly. We've implemented React-Redux for efficient state management, ensuring smooth handling of different user sessions and personalized experiences.
