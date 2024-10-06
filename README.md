@@ -41,9 +41,7 @@ This is a App that we built, when we've  participated in T-hub hackthon coducted
   
 * **Meditation& Yoga** - The app offers a Meditation & Yoga section with 50+ yoga asanas, each with descriptions highlighting their health benefits. Whether for flexibility, stress relief, or overall well-being, this feature provides guided practices to support both physical and mental health.
 
-* **Initial Analysis**
-
-The app begins with an **initial questionnaire** focused on key areas such as today's physical activity, screen time, food habits, mood, stress level, energy at school/work, progress on goals, and age. Based on the user's responses, a **health score** between **1-100** is generated—higher scores indicate better health. This score serves multiple purposes:
+* **Initial Analysis** The app begins with an **initial questionnaire** focused on key areas such as today's physical activity, screen time, food habits, mood, stress level, energy at school/work, progress on goals, and age. Based on the user's responses, a **health score** between **1-100** is generated—higher scores indicate better health. This score serves multiple purposes:
 - Suggesting personalized daily activities.
 - Being shared with a doctor when the user books an appointment.
 - Forming the foundation for future recommendations and customized app features to improve overall well-being.
