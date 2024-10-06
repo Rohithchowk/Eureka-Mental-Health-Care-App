@@ -38,7 +38,7 @@ This is a App that we built, when we've  participated in T-hub hackthon coducted
 
 <img src="https://github.com/Rohithchowk/Eureka-Mental-Health-Care-App/blob/main/Flow%20Diagram.png?raw=true" alt="Flow Diagram" height="400" width="500"></img>
 
-* **Genrating Health Score frequently with Alexa based Model**
+* <h2>Genrating Health Score frequently with Alexa based Model</h2>
 
 1. User Interaction
 Users engage in conversations with the Alexa-powered virtual assistant, answering questions related to their daily activities, mood, stress levels, and overall health.
