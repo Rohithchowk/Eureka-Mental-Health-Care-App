@@ -33,7 +33,7 @@ This is a App that we built, when we've  participated in T-hub hackthon coducted
 * Regression Model
 
 
-## Features
+## FEATURES
 
   
 
